@@ -1,0 +1,294 @@
+﻿<Window x:Class="vcsDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:vcsDemo"
+        mc:Ignorable="d"
+        xmlns:winform="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="MainWindow" Height="850" Width="850" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Window.Resources>
+        <Style TargetType="Label">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="3"/>
+        </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="登录功能" FontSize="8" VerticalAlignment="Center" Margin="0" Padding="0"/>
+                <Grid Height="2" VerticalAlignment="Center" Background="#ddd" Grid.Column="1" Margin="5,0"></Grid>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="url:" Grid.Column="0"></Label>
+                <TextBox x:Name="txtUrl" Grid.Column="1" ></TextBox>
+                <Label Content="账号:" Grid.Column="2"></Label>
+                <TextBox x:Name="txtAccount" Grid.Column="3" ></TextBox>
+                <Label Content="密码:" Grid.Column="4"></Label>
+                <TextBox x:Name="txtPass" Grid.Column="5" ></TextBox>
+                <Button Content="注册账号" Click="Button_Click_Register" Grid.Column="6"/>
+                <Button Content="登录" Click="Button_Click_Login" Grid.Column="7"></Button>
+            </Grid>
+            <Grid x:Name="wrapJoin">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="txtCrop" Text="企业名称" Grid.Column="0"></TextBox>
+                <Button Content="注册企业" Click="Button_Click_Register_Crop" Grid.Column="1"></Button>
+                <TextBox x:Name="txtCropAddName" Text="用户名称" Grid.Column="2"></TextBox>
+                <Button Content="企业加人" Click="Button_Click_Crop_Add" Grid.Column="3"></Button>
+                <Label Content="房间名称:" Grid.Column="4"></Label>
+                <TextBox x:Name="txtTitle" Grid.Column="5"></TextBox>
+                <Button x:Name="btnCreate" Content="创建" Grid.Column="6" Click="btnCreate_Click"></Button>
+                <Label Content="房间名称:" Grid.Column="7"></Label>
+                <TextBox x:Name="txtRoomNo" Grid.Column="8"></TextBox>
+                <Button x:Name="btnJoin2" Content="加入2" Grid.Column="9" Click="btnJoin2_Click" ></Button>
+                <Button x:Name="btnJoin" Content="加入" Grid.Column="9" Click="btnJoin_Click" ></Button>
+                <Button x:Name="btnQuit" Content="退出" Grid.Column="10" Click="btnQuit_Click" ></Button>
+            </Grid >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="会议功能" FontSize="8" VerticalAlignment="Center" Margin="0" Padding="0"/>
+                <Grid Height="2" VerticalAlignment="Center" Background="#ddd" Grid.Column="1" Margin="5,0"></Grid>
+            </Grid>
+            <WrapPanel x:Name="wrapMeeting" Height="auto">
+                <WrapPanel.Resources>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Width" Value="80"/>
+                        <Setter Property="Margin" Value="3"/>
+                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                    </Style>
+                </WrapPanel.Resources>
+                <TextBox x:Name="txtMic" Text="麦克风编号"/>
+                <Button Content="打开麦克风" Click="btnOpenMic_Click"></Button>
+                <Button Content="关闭麦克风" Click="btnCloseMic_Click"></Button>
+                <TextBox x:Name="txtCam" Text="麦克风编号"></TextBox>
+                <TextBox x:Name="txtCamEx" Text="麦克风编号"></TextBox>
+                <Button Content="打开摄像头" Click="btnOpenCam_Click"></Button>
+                <Button Content="关闭摄像头" Click="btnCloseCam_Click"></Button>
+                <Button Content="打开扬声器" Click="btnOpenSpeaker_Click"></Button>
+                <Button Content="关闭扬声器" Click="btnCloseSpeaker_Click"></Button>
+                <Button Content="主持人开水印" Click="btnHostWaterMarkOpen_Click"></Button>
+                <Button Content="主持人关水印" Click="btnHostWaterMarkClose_Click"></Button>
+                <Button Content="房间静音" Click="btnHostRoomMute_Click"></Button>
+                <Button Content="房间恢复静音" Click="btnHostRoomUnMute_Click"></Button>
+                <Button Content="所有成员静音" Click="btnHostMute_Click"></Button>
+                <Button Content="所有成员恢复静音" Click="btnHostUnMute_Click"></Button>
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton x:Name="rbtnDesk" Content="桌面" IsChecked="True"></RadioButton>
+                    <RadioButton x:Name="rbtnWhiteBoard" Content="白板"></RadioButton>
+                    <RadioButton x:Name="rbtnImageBoard" Content="图片"></RadioButton>
+                </StackPanel>
+                <Button Content="共享"  Click="btnShare_Click"/>
+                <Button Content="结束共享" Click="btnShareClose_Click"/>
+                <Button Content="水印-开" Click="btnWaterMarkOpen_Click"/>
+                <Button Content="水印-关" Click="btnWaterMarkClose_Click"/>
+                <Button Content="主持人锁定会议" Click="btnHostLock_Click"/>
+                <Button Content="主持人结束锁定" Click="btnHostUnLock_Click"/>
+                <Button Content="举手解除禁言" Click="btnHandUp_Click"/>
+                <Button Content="取消举手" Click="btnHandUpNo_Click"/>
+                <TextBox x:Name="txtChat" Text="聊天内容" />
+                <Button Content="发送聊天（全）" Click="btnChatAll_Click"/>
+                <Button Content="共享区域改变" Click="btnShareRectChange_Click"/>
+                <Button Content="共享2" Click="btnTest_Click"/>
+                <Button Content="结束共享2" Click="btnTest2_Click"/>
+            </WrapPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="房间状态："></Label>
+                <Label Content="会议号："></Label>
+                <Label x:Name="lblMeetingNo"/>
+                <Label Content="共享类型："></Label>
+                <Label x:Name="lblShareType" />
+                <Label Content="共享人："/>
+                <Label x:Name="lblShareUser"/>
+                <Label Content="水印："/>
+                <Label x:Name="lblwater"/>
+                <Label Content="锁定："/>
+                <Label x:Name="lblLock"/>
+                <Label Content="房间音频："/>
+                <Label x:Name="lblRoomAudio"/>
+                <Label Content="房间视频："/>
+                <Label x:Name="lblRoomVideo"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="我的数据"/>
+                <Label Content="角色"/>
+                <Label x:Name="lblRole"/>
+                <Label Content="视频："/>
+                <Label x:Name="lblVideo"/>
+                <Label Content="音频："/>
+                <Label x:Name="lblAudio"/>
+                <Label Content="举手："/>
+                <Label x:Name="lblHand"/>
+                <Label Content="速率kbps："/>
+                <Label x:Name="lblRate"/>
+                <Label Content="延迟ms"/>
+                <Label x:Name="lblDelay"/>
+                <Label Content="丢包率"/>
+                <Label x:Name="lblLose"/>
+                <Label Content="补偿丢包率"/>
+                <Label x:Name="lblReLose"/>
+                <Label Content="网络档位"/>
+                <Label x:Name="lblNetwork"/>
+                <Label Content="档位"/>
+                <Label x:Name="lblGear"/>
+                <Label Content="分贝"/>
+                <Label x:Name="lblDb"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="会议中成员用户："></Label>
+                <Label Content="刷新间隔："/>
+                <RadioButton Content="1S"  Click="rbtn1S_Click"></RadioButton>
+                <RadioButton Content="10S(默认)" IsChecked="True" Click="rbtn10S_Click"></RadioButton>
+            </StackPanel>
+            <ListView x:Name="lv" IsSynchronizedWithCurrentItem="True" Height="100" Focusable="False">
+                <ListView.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="TextBlock.FontSize" Value="12"/>
+                    </Style>
+                </ListView.Resources>
+                <ListView.View>
+                    <GridView AllowsColumnReorder="True">
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=ID}"  Header="StreamId"  Width="55"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=Name}"  Header="名称" Width="40"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=CamState}"  Header="摄像头状态" Width="40"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=MicState}"  Header="麦克风状态" Width="40"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=DB}"  Header="分贝" Width="40"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=Network}"  Header="网络" Width="40"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=ServerLose}"  Header="服务器到端丢包率" Width="45"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=ClientLose}"  Header="端到端丢包率" Width="45"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=VideoPack}"  Header="视频包" Width="40"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=AudioPack}"  Header="音频包" Width="40"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=AllPack}"  Header="总包" Width="40"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=AllLosePack}"  Header="总丢包" Width="40"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=Gaer}"  Header="档位" Width="40"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=ReLoaePack}"  Header="补偿丢包" Width="40"/>
+                        <!--<GridViewColumn  Header="-" Width="70">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="查看视频" Click="btnMemberOpenCam_Click"></Button>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>-->
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=HandUp}"  Header="举手状态" Width="40"/>
+                        <GridViewColumn  DisplayMemberBinding="{Binding Path=Role}"  Header="角色" Width="40"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <WrapPanel Orientation="Horizontal">
+                <Label Content="选中成员："></Label>
+                <Label x:Name="lblSelectUser"/>
+                <Button Content="查看视频（小）" Click="btnMemberOpenCam_Click"/>
+                <Button Content="查看视频（大）" Click="btnMemberOpenCam2_Click"/>
+                <Button Content="语音优先" Click="btnAudioFirst_Click"/>
+                <Button Content="恢复语音优先"  Click="btnUnAudioFirst_Click"/>
+                <Button Content="发送私聊聊天"  Click="btnChat_Click"/>
+                <Button Content="更换主持人"  Click="btnMoveHost_Click"/>
+                <Button Content="设置联席主持人"  Click="btnUnionHost_Click"/>
+                <Button Content="取消联席主持人"  Click="btnUnUnionHost_Click"/>
+                <Button Content="同意举手"  Click="btnHostHandUpOk_Click"/>
+                <Button Content="拒绝举手请求" Click="btnHostHandUpNo_Click"/>
+            </WrapPanel>
+            <StackPanel Visibility="Collapsed" Orientation="Vertical">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="测试" FontSize="8" VerticalAlignment="Center" Margin="0" Padding="0"/>
+                    <Grid Height="2" VerticalAlignment="Center" Background="#ddd" Grid.Column="1" Margin="5,0"></Grid>
+                </Grid>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="自定义插件-audio"></Button>
+                    <Button Content="test"/>
+                </StackPanel>
+            </StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="图像" FontSize="8" VerticalAlignment="Center" Margin="0" Padding="0"/>
+                <Grid Height="2" VerticalAlignment="Center" Background="#ddd" Grid.Column="1" Margin="5,0"></Grid>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Content="本地画面" Grid.Row="0" Grid.Column="0"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+
+                    <Label Content="成员视频流" />
+                </StackPanel>
+                <WindowsFormsHost Grid.Row="1" Grid.Column="0" Height="234">
+                    <winform:PictureBox x:Name="MeScreen" Dock="Fill" AllowDrop="True" 
+                            SizeMode="StretchImage"
+                            BackgroundImageLayout="Stretch"/>
+                </WindowsFormsHost>
+                <Image x:Name="img" Grid.Row="1" Grid.Column="0" Height="234"></Image>
+                <WindowsFormsHost Height="234" Width="390" Grid.Row="1" Grid.Column="1">
+                    <winform:Panel x:Name="panel">
+                        <!--<winform:FlowLayoutPanel x:Name="OtherScreen" Dock="Fill" AllowDrop="True" />-->
+                        </winform:Panel>
+                    </WindowsFormsHost>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="消息打印" FontSize="8" VerticalAlignment="Center" Margin="0" Padding="0"/>
+                <Grid Height="2" VerticalAlignment="Center" Background="#ddd" Grid.Column="1" Margin="5,0"></Grid>
+            </Grid>
+        </StackPanel>
+        <TextBox x:Name="txtMsg" Grid.Row="1" VerticalContentAlignment="Top" TextChanged="txtMsg_TextChanged">
+
+        </TextBox>
+    </Grid>
+</Window>
