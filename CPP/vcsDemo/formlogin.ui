@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormLogin</class>
+ <widget class="QWidget" name="FormLogin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>343</width>
+    <height>349</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" columnstretch="0,0,0,0">
+   <property name="horizontalSpacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="1" colspan="3">
+    <widget class="QComboBox" name="ledAddr">
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>https://ezm.ys7.com/vcs/</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>https://rtcdev1.ys7.com/vcs/</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>https://test1.swmeeting.cn/vcs/</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>https://test2.swmeeting.cn/vcs/</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>https://test3.swmeeting.cn/vcs/</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>https://test4.swmeeting.cn/vcs/</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>https://pb.swmeeting.cn/vcs/</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>http://vcs.anyconf.cn:5000/vcs/</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>Appkey:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Appid：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>房间号：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="0" colspan="4">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="text">
+            <string>登录/加入会议</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="text">
+            <string>更多功能</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <layout class="QGridLayout" name="gridLayout_2">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="3" column="0" colspan="4">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QCheckBox" name="chkMic">
+              <property name="text">
+               <string>麦克风</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chkCam">
+              <property name="text">
+               <string>摄像头</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="chkSpeaker">
+              <property name="text">
+               <string>扬声器</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="text">
+             <string>设备枚举</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="text">
+             <string>测速</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="text">
+             <string>创建加入房间</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="btnTest">
+            <property name="text">
+             <string>测试</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="3">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QRadioButton" name="rbtn1">
+              <property name="text">
+               <string>正常</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rbtn2">
+              <property name="text">
+               <string>纯收发</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="rbtn3">
+              <property name="text">
+               <string>多路</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="btnRegiester">
+            <property name="text">
+             <string>账号注册</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="btnDirShare">
+            <property name="text">
+             <string>投屏</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="btnStopDirShare">
+            <property name="text">
+             <string>停止投屏</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="ledmsg">
+         <property name="text">
+          <string>消息：</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="1" colspan="3">
+    <widget class="QLineEdit" name="ledAppkey"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>账号：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1" colspan="3">
+    <widget class="QLineEdit" name="ledPass"/>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>密码：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="3">
+    <widget class="QLineEdit" name="ledAppid"/>
+   </item>
+   <item row="12" column="1" colspan="3">
+    <widget class="QLineEdit" name="ledRoomNoPass"/>
+   </item>
+   <item row="4" column="1" colspan="3">
+    <widget class="QLineEdit" name="ledUser"/>
+   </item>
+   <item row="11" column="1" colspan="3">
+    <widget class="QLineEdit" name="ledRoomno"/>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>房间密码</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>服务地址：</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
