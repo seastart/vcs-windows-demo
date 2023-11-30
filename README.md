@@ -45,7 +45,7 @@ CPP Code
     HttpNetwork::Get()->SetAppkey("<# 替换成平台分配的AppID #>");
 ```
 
-#### step 4：运行&复制依赖库到输出目录
+#### step 4：编译&复制依赖库到输出目录
 
 
 
