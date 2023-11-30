@@ -5,3 +5,6 @@
 /.vs
 /CPP/vcsDemo/Debug
 /CPP/vcsDemo/Release
+/CPP/Debug
+/CPP/Release
+/CPP/vcsDemo.pro.user

@@ -104,5 +104,7 @@ FORMS += \
     widget.ui
 
 
-LIBS += -L$$PWD//vcs/lib -lvcs
-INCLUDEPATH += $$PWD/vcs/include
+LIBS += -L$$PWD/../SDK/x86 -lvcs
+INCLUDEPATH += $$PWD/../SDK/include
+
+DESTDIR = $$PWD/../out

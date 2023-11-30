@@ -25,11 +25,6 @@ FormLogin::FormLogin(QWidget *parent) :
     connect(this,SIGNAL(RoomEnter()),this,SLOT(OnRoomEnter()));
     connect(RoomControl::Get(),SIGNAL(DirectShareEvent(int,QString)),this,SLOT(OnDirectShareEvent(int,QString)));
     LoadData();
-
-    if(ui->ledAppid->text().isEmpty()){
-        ui->ledAppid->setText("0a16828823ce41c5ad040be3ed384c14");
-        ui->ledAppkey->setText("a67c660b29234e2891cc6627fc6401ce");
-    }
 }
 
 FormLogin::~FormLogin()
