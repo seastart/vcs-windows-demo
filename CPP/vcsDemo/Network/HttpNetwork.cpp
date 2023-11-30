@@ -7,8 +7,8 @@ HttpNetwork* HttpNetwork::object = nullptr;
 
 HttpNetwork::HttpNetwork()
 {
-    appid = "0a16828823ce41c5ad040be3ed384c14";
-    appkey = "a67c660b29234e2891cc6627fc6401ce";
+    appid = "";
+    appkey = "";
     passkey = "0a6430bcb7084269817813a06e905979";
 	fileHost = "";
 	host = "http://vcs.anyconf.cn:5000/vcs/";
