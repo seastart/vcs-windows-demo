@@ -20,21 +20,18 @@ SDK下载到指定目录
 
 ###### 目录内容
 ```
-├─ CPP
-│  ├─ vcsDemo
-│  │  ├─ vcsDemo.pro
-│  │  ├─ vcsDemo.sln
-├─ CSharp
-│  ├─ vcsDemo
-│  │  ├─ vcsDemo.sln
-├─ SDK
-│  ├─ include
-│  │  ├─ vcs.h
-│  ├─ x86
-│  │  ├─ vcs.lib
-│  │  ├─ vcs.dll
+├─ CPP                    // 提供 C++ 语言 Demo
+│  ├─ vcsDemo.pro         // 提供 Qt Creator Ide 
+│  ├─ vcsDemo.sln         // 提供 Qt Vs Ide     
+├─ CSharp                 // 提供 c# 语言Demo
+│  ├─ vcsDemo.sln         // 提供 Vs Ide 
+├─ SDK                    // SDK 应用目录
+│  ├─ include             // SDK C++ 头文件目录
+│  │  ├─ vcs.h            // SDK C++ 关键头文件
+│  ├─ x86                 // SDK C++ 链接库目录
+│  │  ├─ vcs.lib          // SDK C++ 链接库
 │  │  ├─ ...
-├─ out
+├─ out                    // SDK Demo 输出目录（编译成功后可执行文件位置）
 ```
 
 #### step 3：替换申请的AppID和AppKey
